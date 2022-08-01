@@ -3,6 +3,7 @@ const createTask = document.querySelector(".create-task");
 const tasksField = document.querySelector(".tasks");
 const btnAddTask = document.querySelector(".btn-add");
 const btnClearAll = document.querySelector(".btn-clear");
+let content = document.createElement("div");
 let arrayOfTasks = [];
 
 // foucs on input to createTask
@@ -43,7 +44,7 @@ tasksField.addEventListener("click", function (e) {
       }
     }
     addToLocal(arrayOfTasks);
-    e.target.elementParent.classList.toggle("done");
+    content.classList.toggle("done");
   }
 });
 
